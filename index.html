@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <h2>Registration form</h2>
+    <div class="container">
+        <table>
+            <form id="form" action="">
+                <tr>
+                    <td> <label for="firstName">First name</label> </td>
+                    <td> <input type="text" id="firstName" name="firstName"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="lastName">last name</label> </td>
+                    <td> <input type="text" id="lastName" name="lastName"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="dob">Date of Birth</label> </td>
+                    <td> <input type="date" id="dob" name="dob"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="email">Email</label> </td>
+                    <td> <input type="email" id="email" name="email"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="mobile">Mobile</label> </td>
+                    <td> <input type="te" id="mobile" name="mobile" maxlength="10"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="password">Password</label> </td>
+                    <td> <input type="password" id="password" name="password"> </td>
+                </tr>
+                <tr>
+                    <td> <label for="confPass">Confirm Password</label> </td>
+                    <td> <input type="password" id="confPass" name="confPass"> </td>
+                </tr>
+            </form>
+                <tr>
+                    <td></td>
+                    <td> <button id="submit">Submit</button> </td>
+                </tr>      
+        </table>     
+    </div>
+    <div id="result">
+        <div id="error"></div>
+        <div id="success"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
