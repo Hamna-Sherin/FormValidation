@@ -41,6 +41,20 @@ input{
     font-size: larger;
 }
 
+.password-showhide {
+  position: relative;
+}
+
+.password-showhide button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 #submit:hover{
     cursor: pointer;
 }
