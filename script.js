@@ -8,6 +8,24 @@ function isStrongPassword(password) {
   return regex.test(password);
 }
 
+$("#mobile").on("input", function() {
+    this.value = this.value.replace(/\D/g, '');
+});
+
+$("#togglePassword").click(function() {
+  const passwordField = $("#password");
+  const type = passwordField.attr("type") === "password" ? "text" : "password";
+  passwordField.attr("type", type);
+  $(this).find("i").toggleClass("fa-eye fa-eye-slash");
+});
+
+$("#toggleConfPass").click(function() {
+  const passwordField = $("#confPass");
+  const type = passwordField.attr("type") === "password" ? "text" : "password";
+  passwordField.attr("type", type);
+  $(this).find("i").toggleClass("fa-eye fa-eye-slash");
+});
+
 
 $("#submit").click(function(){
     $("#submit").css("border-color" , "white");
@@ -47,11 +65,7 @@ $("#submit").click(function(){
     if(isEmail($("#email").val()) == false){
         errormessage += "<p>Enter a valid Email id</p>"
     }
-
-    if($.isNumeric($("#mobile").val()) == false ){
-        errormessage += "<p>Enter a valid mobile number</p>"
-    }
-
+    
     if(phone.length != 10){
         errormessage += "<p>Mobile number must be exactly 10 digits</p>"
     }
